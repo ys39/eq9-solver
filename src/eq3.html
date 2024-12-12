@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      canvas {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="eqsolver" width="1600" height="500"></canvas>
+    <h3>三元連立方程式求解</h3>
+    <h4>
+        20x + 40y + 30z - 20 = 0
+        <br>
+        -20x + 20y + 50z - 40 = 0
+        <br>
+        40x - 30y - 20z + 30 = 0
+    </h4>
+    <div>
+      <p>
+        ティッピングプレート1の角度(rad) <span id="tippingPlate1Angle"></span>
+      </p>
+      <p>
+        ティッピングプレート2の角度(rad) <span id="tippingPlate2Angle"></span>
+      </p>
+      <p>
+        ティッピングプレート3の角度(rad) <span id="tippingPlate3Angle"></span>
+      </p>
+      <p>
+        ティッピングプレート4の角度(rad) <span id="tippingPlate4Angle"></span>
+      </p>
+    </div>
+    <div>
+      <p>
+        sinα/sinω(x)
+        <span id="x"></span>
+      </p>
+      <p>
+        sinβ/sinω(y)
+        <span id="y"></span>
+      </p>
+      <p>
+        sinγ/sinω(z)
+        <span id="z"></span>
+      </p>
+    </div>
+  </body>
+  <script src="./js/main_eq3.js" type="module"></script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      canvas {
+        background-color: #eaeaea;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="eqsolver" width="3500" height="1000"></canvas>
+    <h3>五元連立方程式求解</h3>
+    <h4>
+        70x + 80y + 30z + 10w - 20u + 90 = 0
+        <br>
+        -20x + 20y + 90z + 30w - 40u + 20 = 0
+        <br>
+        40x - 30y - 20z - 30w + 30u - 30 = 0
+        <br>
+        -40x - 100y - 40z - 70w + 70u + 50 = 0
+        <br>
+        -100x + 50y + 50z + 50w + 10u - 10 = 0
+    </h4>
+    <div>
+      <p>
+        ティッピングプレート1の角度(rad) <span id="tippingPlate1AngleRad"></span> / ティッピングプレート1の角度(度) <span id="tippingPlate1AngleDeg"></span>
+      </p>
+      <p>
+        ティッピングプレート2の角度(rad) <span id="tippingPlate2AngleRad"></span> / ティッピングプレート1の角度(度)<span id="tippingPlate2AngleDeg"></span>
+      </p>
+      <p>
+        ティッピングプレート3の角度(rad) <span id="tippingPlate3AngleRad"></span> / ティッピングプレート1の角度(度)<span id="tippingPlate3AngleDeg"></span>
+      </p>
+      <p>
+        ティッピングプレート4の角度(rad) <span id="tippingPlate4AngleRad"></span> / ティッピングプレート1の角度(度)<span id="tippingPlate4AngleDeg"></span>
+      </p>
+      <p>
+        ティッピングプレート5の角度(rad) <span id="tippingPlate5AngleRad"></span> / ティッピングプレート1の角度(度)<span id="tippingPlate5AngleDeg"></span>
+      </p>
+      <p>
+        ティッピングプレート6の角度(rad) <span id="tippingPlate6AngleRad"></span> / ティッピングプレート1の角度(度)<span id="tippingPlate6AngleDeg"></span>
+      </p>
+    </div>
+    <div>
+      <p>
+        sinα/sinω(x)
+        <span id="x"></span>
+      </p>
+      <p>
+        sinβ/sinω(y)
+        <span id="y"></span>
+      </p>
+      <p>
+        sinγ/sinω(z)
+        <span id="z"></span>
+      </p>
+      <p>
+        sinδ/sinω(w)
+        <span id="w"></span>
+      </p>
+      <p>
+        sinε/sinω(u)
+        <span id="u"></span>
+      </p>
+    </div>
+  </body>
+  <script src="./js/main_eq5.js" type="module"></script>
+</html>

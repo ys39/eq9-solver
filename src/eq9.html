@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    canvas {
+      display: block;
+      margin: 20px auto;
+      background-color: #eaeaea;
+      border: 2px solid #ccc;
+    }
+
+    h3 {
+      text-align: left;
+      color: #005AFF;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    h4 {
+      flex: 1;
+      padding: 15px;
+      background-color: #fff;
+      border-left: 5px solid #03AF7A;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: auto;
+    }
+
+    div {
+      flex: 1;
+      padding: 15px;
+      background-color: #fff;
+      border-left: 3px solid #F6AA00;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      overflow: auto;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    #x, #y, #z, #w, #u, #v, #t, #s, #r {
+      font-weight: bold;
+      color: #990099;
+    }
+
+    span {
+      font-weight: bold;
+      color: #005AFF;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="eqsolver" width="3100" height="1000"></canvas>
+
+  <h3>九元連立方程式求解機 アニメーション
+  </h3>
+
+  <div class="container">
+    <h4>
+      70x + 60y + 40z + 10w - 20u + 70v + 60t + 30s + 10r - 20 = 0<br>
+      -20x + 20y + 20z - 30w - 40u + 20v + 20t + 10s + 50r - 40 = 0<br>
+      40x - 10y - 20z - 10w + 10u - 30v - 20t - 30s + 30r + 30 = 0<br>
+      -40x - 30y - 40z + 20w + 30u + 40v + 30t - 10s - 20r + 10 = 0<br>
+      -100x + 80y + 60z - 50w + 100u - 10v - 80t - 90s - 90r - 60 = 0<br>
+      90x + 40y - 60z + 110w - 80u + 90v + 100t - 70s + 80r - 100 = 0<br>
+      20x - 50y + 80z + 70w + 70u + 110v + 30t + 120s + 120r - 120 = 0<br>
+      70x + 100y + 100z + 90w + 150u + 150v + 80t + 80s + 100r + 120 = 0<br>
+      -60x - 70y - 80z - 130w - 110u - 50v + 100t - 30s - 70r - 140 = 0
+    </h4>
+
+    <div>
+        <p>ティッピングプレート1の角度<span id="tippingPlate1AngleRad"></span> (rad) / <span id="tippingPlate1AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート2の角度<span id="tippingPlate2AngleRad"></span> (rad) / <span id="tippingPlate2AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート3の角度<span id="tippingPlate3AngleRad"></span> (rad) / <span id="tippingPlate3AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート4の角度<span id="tippingPlate4AngleRad"></span> (rad) / <span id="tippingPlate4AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート5の角度<span id="tippingPlate5AngleRad"></span> (rad) / <span id="tippingPlate5AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート6の角度<span id="tippingPlate6AngleRad"></span> (rad) / <span id="tippingPlate6AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート7の角度<span id="tippingPlate7AngleRad"></span> (rad) / <span id="tippingPlate7AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート8の角度<span id="tippingPlate8AngleRad"></span> (rad) / <span id="tippingPlate8AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート9の角度<span id="tippingPlate9AngleRad"></span> (rad) / <span id="tippingPlate9AngleDeg"></span>(度)</p>
+        <p>ティッピングプレート10の角度<span id="tippingPlate10AngleRad"></span> (rad) / <span id="tippingPlate10AngleDeg"></span>(度)</p>
+    </div>
+
+    <div>
+      <p>sinα/sinω(x) <span id="x"></span></p>
+      <p>sinβ/sinω(y) <span id="y"></span></p>
+      <p>sinγ/sinω(z) <span id="z"></span></p>
+      <p>sinδ/sinω(w) <span id="w"></span></p>
+      <p>sinε/sinω(u) <span id="u"></span></p>
+      <p>sinζ/sinω(v) <span id="v"></span></p>
+      <p>sinη/sinω(t) <span id="t"></span></p>
+      <p>sinθ/sinω(s) <span id="s"></span></p>
+      <p>sinι/sinω(r) <span id="r"></span></p>
+    </div>
+  </div>
+
+  <script src="./js/main_eq9.js" type="module"></script>
+</body>
+</html>
